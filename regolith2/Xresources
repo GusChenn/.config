@@ -1,0 +1,24 @@
+regolith.wallpaper.file: ~/Documents/Wallpapers/b-228.jpg
+regolith.lockscreen.file: ~/Documents/Wallpapers/b-228.jpg
+
+gtk.font_name: "Roboto Black"
+gtk.document_font_name: "Roboto Black"
+
+gtk.icon_theme_name: Papirus
+
+i3-wm.gaps.inner.size: 15
+i3-wm.gaps.smart: false
+
+i3-wm.bar.position: top
+i3-wm.bar.background.color: "#611B96"
+i3-wm.bar.separator.color: "#ffffff"
+i3-wm.bar.separatorchar: "|"
+
+i3-wm.window.border.size: 4
+i3-wm.window.border.radius: 10
+
+i3-wm.font: "Roboto Black"
+
+i3xrocks.value.font: "Roboto Black"
+
+regolith.look.path: /usr/share/regolith-look/dracula

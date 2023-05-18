@@ -1,0 +1,9 @@
+#!/bin/bash
+
+branch=$(git symbolic-ref --short HEAD)
+
+echo
+echo "--- Creating remote branch branch $branch ---"
+echo
+
+git push --set-upstream origin $branch

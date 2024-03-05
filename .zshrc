@@ -1,14 +1,20 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="minimal"
+# ZSH_THEME="josh-moded"
+ZSH_THEME="typewritten"
+export TYPEWRITTEN_CURSOR="block"
+export TYPEWRITTEN_SYMBOL="❯"
+export TYPEWRITTEN_ARROW_SYMBOL="➜"
+# export TYPEWRITTEN_COLOR_MAPPINGS="primary:#ECE1D7;secondary:#ECE1D7;accent:#ECE1D7"
+export TYPEWRITTEN_COLOR_MAPPINGS="primary:#7287FD;secondary:#7287FD;accent:#7287FD"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,7 +77,6 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting)
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,9 +89,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='lvim'
+  export EDITOR='nvim'
 else
-  export EDITOR='lvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -98,41 +103,50 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias zshconfig="lvim ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias regolithconfig="nvim ~/.config/regolith2/Xresources"
 alias nvimconfig="lvim ~/.config/nvim/init.vim"
 alias update="sudo apt update -y && sudo apt upgrade -y && sudo apt-get update -y && sudo apt-get upgrade -y && sudo flatpak update"
+alias picomconfig="lvim ~/.config/regolith2/picom/config"
 
-alias up="docker compose up postgres redis webpacker sidekiq rails pgbouncer"
+alias up="docker compose up postgres redis webpacker sidekiq rails"
 alias up-cypress="DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true RAILS_ENV=e2e docker compose up postgres redis webpacker sidekiq rails pgbouncer"
 alias cypress-pan="yarn workspace @qulture/people-analytics cypress"
 alias jest-pan="yarn workspace @qulture/people-analytics run test:jest --no-cache"
 alias pause="docker compose pause"
 alias play="docker compose unpause"
-alias term1="docker compose up postgres redis"
-alias term2="docker compose up webpacker sidekiq"
-alias term3="docker compose up rails"
+alias partial="docker compose up postgres redis"
 alias runner="docker compose run --rm runner"
 alias runner-cypress="DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true RAILS_ENV=e2e docker compose run --rm runner"
-alias packages="bundle install && yarn install && docker compose run --rm runner bundle install && docker compose run --rm runner yarn install"
 alias storybook-full="docker compose up storybook"
+alias permission="sudo chown -R $USER:$USER ."
+alias packages="sudo chown -R $USER:$USER . && bundle install && yarn install && docker compose run --rm runner bundle install && yarn install"
+alias diadeguarda="qr vpn connect"
+alias run="qr console run"
+
+# Vim aliases
+alias v="nvim"
+alias nvimconfig="nvim ~/.config/nvim"
+alias nv="neovide"
+
+# VScode aliases
+alias c="code"
 
 # Add the file at the end of the command
-alias storybook="yarn storybook"
-
-alias permission="sudo chown -R $USER:$USER ."
-
-alias update-app="bundle install && yarn install"
+alias storybook="docker compose up storybook"
 
 # git aliases
 alias grh="git reset --hard HEAD"
 alias grs="git reset --soft HEAD~1"
 alias gs="git status"
-alias gc="git checkout"
+alias gco="git checkout"
 alias gcm="git commit -m"
 alias gclean="git clean -f"
 alias gd="git diff"
+alias gb="git checkout -b"
 
-alias bat="batcat"
+alias cat="batcat"
+alias logout="gnome-session-quit"
 
 
 # Enables nvm
@@ -142,5 +156,21 @@ export NVM_DIR="$HOME/.nvm"
 
 # Imports z script
 . $HOME/.config/my-scripts/z/z.sh
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Add polybar scripts to path - we have to add polybar path to ~/.profile
+# Add appimages to path
+export PATH=$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.rvm/vin:$HOME/.appimages:$HOME/.config/polybar/scripts
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/.appimages"
+
+# Add appimages path to ilia env var
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/gchen/.appimages/
+
+# Add gems to path
+export PATH="$PATH:$HOME/.gem/ruby/3.2.0/bin"
+
+# # Run tmux on startup
+if [ "$TMUX" = "" ]; then tmux; fi
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

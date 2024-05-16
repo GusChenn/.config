@@ -3,18 +3,23 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
+export REPOS_PATH="$HOME/Repos"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="josh-moded"
-ZSH_THEME="typewritten"
-export TYPEWRITTEN_CURSOR="block"
-export TYPEWRITTEN_SYMBOL="❯"
-export TYPEWRITTEN_ARROW_SYMBOL="➜"
-# export TYPEWRITTEN_COLOR_MAPPINGS="primary:#ECE1D7;secondary:#ECE1D7;accent:#ECE1D7"
-export TYPEWRITTEN_COLOR_MAPPINGS="primary:#7287FD;secondary:#7287FD;accent:#7287FD"
+
+# Starship theme config
+eval "$(starship init zsh)"
+
+# Typewritten theme config
+# ZSH_THEME="typewritten"
+# export TYPEWRITTEN_CURSOR="block"
+# export TYPEWRITTEN_SYMBOL="❯"
+# export TYPEWRITTEN_ARROW_SYMBOL="➜"
+# export TYPEWRITTEN_COLOR_MAPPINGS="primary:#7287FD;secondary:#7287FD;accent:#7287FD"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,7 +81,11 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+
+# Configure autosuggest style
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6f6f6f,underline"
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,15 +122,11 @@ alias up="docker compose up postgres redis webpacker sidekiq rails"
 alias up-cypress="DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true RAILS_ENV=e2e docker compose up postgres redis webpacker sidekiq rails pgbouncer"
 alias cypress-pan="yarn workspace @qulture/people-analytics cypress"
 alias jest-pan="yarn workspace @qulture/people-analytics run test:jest --no-cache"
-alias pause="docker compose pause"
-alias play="docker compose unpause"
 alias partial="docker compose up postgres redis"
 alias runner="docker compose run --rm runner"
 alias runner-cypress="DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true RAILS_ENV=e2e docker compose run --rm runner"
-alias storybook-full="docker compose up storybook"
 alias permission="sudo chown -R $USER:$USER ."
 alias packages="sudo chown -R $USER:$USER . && bundle install && yarn install && docker compose run --rm runner bundle install && yarn install"
-alias diadeguarda="qr vpn connect"
 alias run="qr console run"
 
 # Vim aliases
@@ -144,10 +149,10 @@ alias gcm="git commit -m"
 alias gclean="git clean -f"
 alias gd="git diff"
 alias gb="git checkout -b"
+alias lg="lazygit"
 
 alias cat="batcat"
 alias logout="gnome-session-quit"
-
 
 # Enables nvm
 export NVM_DIR="$HOME/.nvm"
@@ -169,8 +174,12 @@ export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/gchen/.appimages/
 # Add gems to path
 export PATH="$PATH:$HOME/.gem/ruby/3.2.0/bin"
 
-# # Run tmux on startup
+# Link cargo
+. "$HOME/.cargo/env"
+
+# Run tmux on startup
 if [ "$TMUX" = "" ]; then tmux; fi
 
-
+# fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

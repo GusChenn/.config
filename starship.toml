@@ -1,0 +1,29 @@
+format = """$character"""
+right_format = """$all"""
+
+[ruby]
+symbol = " "
+
+[git_branch]
+format = 'on [$symbol$branch(:$remote_branch)](purple) '
+symbol = " "
+
+[nodejs]
+symbol = '󰎙 '
+
+[lua]
+symbol = ' '
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]](black) )'
+conflicted = ''
+ahead = ''
+behind = ''
+diverged = '󱡷'
+up_to_date = '✓'
+untracked = '?'
+stashed = '$'
+modified = '!'
+staged = '[++\($count\)](green)'
+renamed = '󰑙'
+deleted = ''

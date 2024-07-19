@@ -1,4 +1,4 @@
-import = [ "~/.config/alacritty/themes/flexoki_light.toml" ]
+import = [ "~/.config/alacritty/themes/catppuccin_mocha.toml" ]
 
 [env]
 TERM = "xterm-256color"
@@ -68,15 +68,15 @@ offset.y = 7
 
   [font.normal]
   family = "JetBrainsMono Nerd Font"
-  style = "ExtraLight"
+  style = "Regular"
 
   [font.bold]
   family = "JetBrainsMono Nerd Font"
-  style = "Regular"
+  style = "SemiBold"
 
   [font.italic]
   family = "VictorMono Nerd Font"
-  style = "Italic"
+  style = "SemiBold Italic"
 
   [font.bold_italic]
   family = "VictorMono Nerd Font"

@@ -1,4 +1,4 @@
-import = [ "~/.config/alacritty/themes/flexoki_light.toml" ]
+import = [ "~/.config/alacritty/themes/catppuccin_mocha.toml" ]
 
 [env]
 TERM = "xterm-256color"
@@ -17,6 +17,8 @@ dynamic_padding = true
 [font]
 # # CommitMono + DankMono
 # size = 15
+# offset.x = 0
+# offset.y = 0
 #
 #   [font.normal]
 #   family = "CommitMono Nerd Font Mono"
@@ -36,10 +38,56 @@ dynamic_padding = true
 
 # ------
 
+# # Maple Mono + VictorMono
+# size = 15
+# offset.x = 0
+# offset.y = 10
+#
+#   [font.normal]
+#   family = "Maple Mono NF"
+#   style = "Light"
+#
+#   [font.bold]
+#   family = "Maple Mono NF"
+#   style = "Regular"
+#
+#   [font.italic]
+#   family = "VictorMono Nerd Font"
+#   style = "Italic"
+#
+#   [font.bold_italic]
+#   family = "VictorMono Nerd Font"
+#   style = "Bold Italic"
+
+# ------
+
+# JetBrainsMono + VictorMono
+size = 14
+offset.x = 0
+offset.y = 7
+
+  [font.normal]
+  family = "JetBrainsMono Nerd Font"
+  style = "Regular"
+
+  [font.bold]
+  family = "JetBrainsMono Nerd Font"
+  style = "SemiBold"
+
+  [font.italic]
+  family = "VictorMono Nerd Font"
+  style = "SemiBold Italic"
+
+  [font.bold_italic]
+  family = "VictorMono Nerd Font"
+  style = "Bold Italic"
+
+# ------
+
 # # IBM Plex Mono
 # size = 15
-# offset.x = 1
-# offset.y = 1
+# offset.x = 0
+# offset.y = 10
 #
 #   [font.normal]
 #   family = "BlexMono Nerd Font Propo"
@@ -82,23 +130,46 @@ dynamic_padding = true
 
 # ------
 
-# VictorMono
-size = 16
-offset.x = 0
-offset.y = 5
+# # Maple Mono NF
+# size = 15
+# offset.x = 1
+# offset.y = 10
+#
+#   [font.normal]
+#   family = "Maple Mono NF"
+#   style = "Light"
+#
+#   [font.bold]
+#   family = "Maple Mono NF"
+#   style = "Bold"
+#
+#   [font.italic]
+#   family = "Maple Mono NF"
+#   style = "LightItalic"
+#
+#   [font.bold_italic]
+#   family = "Maple Mono NF"
+#   style = "BoldItalic"
 
-  [font.normal]
-  family = "VictorMono Nerd Font"
-  style = "Regular"
+# ------
 
-  [font.bold]
-  family = "VictorMono Nerd Font"
-  style = "Bold"
-
-  [font.italic]
-  family = "VictorMono Nerd Font"
-  style = "Italic"
-
-  [font.bold_italic]
-  family = "VictorMono Nerd Font"
-  style = "Bold Italic"
+# # VictorMono
+# size = 16
+# offset.x = 0
+# offset.y = 5
+#
+#   [font.normal]
+#   family = "VictorMono Nerd Font"
+#   style = "Regular"
+#
+#   [font.bold]
+#   family = "VictorMono Nerd Font"
+#   style = "Bold"
+#
+#   [font.italic]
+#   family = "VictorMono Nerd Font"
+#   style = "Italic"
+#
+#   [font.bold_italic]
+#   family = "VictorMono Nerd Font"
+#   style = "Bold Italic"

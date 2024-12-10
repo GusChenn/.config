@@ -1,0 +1,15 @@
+##[pylyzer] failed /users/gchen/.config/kitty/pass_keys.py 1730926174 1255
+.re = pyimport "Failure"
+.Failure = pyimport "Failure"
+
+.___v_desugar_1 = pyimport "Failure"
+
+.result_handler: Never
+.___v_desugar_2 = pyimport "Failure"
+
+.KeyEvent: Never
+.parse_shortcut: Never
+.is_window_vim: |Type_139 <: Structural({.child = ?Type_154}), Type_154: Type|(window: Type_139, vim_id: Obj) -> Never
+.encode_key_mapping: (window: Obj, key_mapping: Obj) -> Never
+.main: () -> Never
+.handle_result: |Type_172: Type, Type_149 <: Structural({.window_id_map = ?Type_172; .active_tab = Never}), T: Type|(args: Never, result: Obj, target_window_id: T or Nat, boss: Type_149) -> Never

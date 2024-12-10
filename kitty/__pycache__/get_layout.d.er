@@ -1,0 +1,7 @@
+##[pylyzer] failed /users/gchen/.config/kitty/get_layout.py 1730925964 157
+.main: () -> Never
+.handle_result: |Type_5 <: Structural({.active_tab = Type_11}), Type_11: Type|(args: Obj, result: Obj, target_window_id: Obj, boss: Type_5) -> Never
+
+
+
+

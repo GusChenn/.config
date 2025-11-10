@@ -1,5 +1,5 @@
 format = """$character"""
-right_format = """$all"""
+right_format = """$directory$time$git_branch$git_status"""
 
 [ruby]
 symbol = " "
@@ -7,6 +7,7 @@ symbol = " "
 [git_branch]
 format = 'on [$symbol$branch(:$remote_branch)](purple) '
 symbol = " "
+truncation_length = 11
 
 [nodejs]
 symbol = '󰎙 '
@@ -14,8 +15,15 @@ symbol = '󰎙 '
 [lua]
 symbol = ' '
 
+[time]
+disabled = false
+time_format = "󰥔 %k:%m"
+
+[directory]
+truncation_length = 2
+
 [git_status]
-format = '([\[$all_status$ahead_behind\]](black) )'
+format = '(\[$all_status$ahead_behind\] )'
 conflicted = ''
 ahead = ''
 behind = ''
@@ -27,3 +35,10 @@ modified = '!'
 staged = '[++\($count\)](green)'
 renamed = '󰑙'
 deleted = ''
+
+[character]
+success_symbol = "[ ](bold green)"
+error_symbol = "[ ](bold red)"
+vimcmd_symbol = "[ ](bold green)"
+vimcmd_replace_symbol = "[ ](bold yellow)"
+vimcmd_visual_symbol = "[ ](bold purple)"

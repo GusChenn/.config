@@ -70,7 +70,9 @@ janky_borders_options=(
 	width=7.0
 	hidpi=off
   # active_color=0xffdcdeaf -- For gruvbox
-  active_color=0xff6aad66 
+  # active_color=0xff56d456 -- for eva01
+  # active_color=0xff629f81 -- green for light themes
+  active_color=0xfff2d5cf
 	inactive_color=0x00000000
 )
 

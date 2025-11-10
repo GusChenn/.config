@@ -1,0 +1,86 @@
+# My personal config!
+
+# Font setup
+# ------------------------------------
+# font-family = "JetBrains Mono"
+# font-feature = cv01, cv04, cv17, cv10, cv12, cv15, cv16, cv18, cv20
+# font-size = 16
+# adjust-cell-width = -2
+# adjust-cell-height = 6
+
+font-family = "Roboto Mono"
+font-style = "Regular"
+font-family-italic = "Victor Mono"
+# font-style-italic = "Extra Light 400 Regular"
+font-family-bold-italic = "Victor Mono"
+# font-style-bold-italic = "Extra Light 700 Regular"
+font-size = 15
+adjust-cell-height = 3
+adjust-cell-width = -3
+
+# Main
+# font-family = "Iosevka Sans Custom"
+# font-size = 17
+# adjust-cell-height = 3
+# adjust-cell-width = -1
+
+# font-family = "Input Mono"
+# font-size = 16
+# adjust-cell-height = 2
+# adjust-cell-width = -1
+
+# font-family = "CommitMonoV143"
+# font-size = 16
+# adjust-cell-height = 7
+# adjust-cell-width = -2
+
+# font-family = "Victor Mono"
+# font-style = "Medium"
+# font-family-italic = "CommitMonoV143"
+# font-style-italic = "Extra Light 400 Regular"
+# font-family-bold-italic = "CommitMonoV143"
+# font-style-bold-italic = "Extra Light 700 Regular"
+# font-size = 17
+
+font-thicken = true
+font-thicken-strength = 50
+
+# font-style = "Medium"
+# font-style-italic = "Medium Italic"
+# font-style-bold = "ExtraBold"
+# font-style-bold-italic = "ExtraBold Italic"
+# ----------------
+
+# Cursor setup
+# ------------------------------------
+cursor-style = "block"
+cursor-style-blink = false
+shell-integration-features = no-cursor
+# ----------------
+
+# Theme setup
+# ------------------------------------
+# theme = dawnfox-custom
+# theme = catppuccin-mocha
+# theme = everforest-dark
+# theme = gruvbox-material
+theme = gruvbox-material-soft
+# ----------------
+
+# Window setup
+# ------------------------------------
+macos-titlebar-style = hidden
+window-padding-x = 60
+window-padding-y = 5,5
+window-padding-balance = false
+# ----------------
+
+# Keys setup
+# ------------------------------------
+macos-option-as-alt = true
+# ----------------
+
+
+# Keybindings setup
+# ------------------------------------
+keybind = shift+enter=text:\n

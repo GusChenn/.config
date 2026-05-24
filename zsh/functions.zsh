@@ -4,7 +4,7 @@ eval "$(zoxide init zsh)"
 
 type starship_zle-keymap-select > /dev/null || eval "$(starship init zsh)"
 
-if [ -z "$TMUX" ] && command -v tmux >/dev/null; then
+if [ -z "$TMUX" ] && [ -z "$ZED_NO_TMUX_AUTO_ATTACH" ] && command -v tmux >/dev/null; then
   # Only in interactive shells
   [[ $- != *i* ]] && return
   if tmux list-sessions >/dev/null 2>&1; then
@@ -19,4 +19,3 @@ if [ -z "$TMUX" ] && command -v tmux >/dev/null; then
     tmux new-session
   fi
 fi
-

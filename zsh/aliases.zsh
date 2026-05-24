@@ -1,4 +1,5 @@
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="nvim ~/.config/zsh/.zshrc"
+alias zshsrc="source ~/.config/zsh/.zshrc"
 alias nvimconfig="lvim ~/.config/nvim/init.vim"
 
 alias up="rm -f tmp/restart.txt && ~/Repos/stayfi/bin/webpack-dev-server"
@@ -47,6 +48,7 @@ alias gcloudauth="gcloud auth application-default login"
 alias gcloudlegislation="gcloudauth ; ~/cloud-sql-proxy manor-tax:us-central1:manor-stag --address 127.0.0.1 --port 1234"
 alias up="docker compose up"
 alias down="docker compose down"
+alias kill-sc="docker ps -aq --filter name=sandcastle- | xargs -r docker rm -f"
 
 alias update-yabai-visudo='echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai'
 

@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+
+.zcompdump*
+.zsh_history

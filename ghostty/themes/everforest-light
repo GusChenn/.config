@@ -1,8 +1,8 @@
-background = EFEBD4
-foreground = 5C6A72
-cursor-color = BDC3AF
-selection-background = EAEDC8
-selection-foreground = 5C6A72
+background = #F5EBCC
+foreground = #5C6A72
+cursor-color = #BDC3AF
+selection-background = #EAEDC8
+selection-foreground = #5C6A72
 
 palette = 0=#EFEBD4
 

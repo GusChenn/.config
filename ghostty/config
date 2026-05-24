@@ -8,31 +8,43 @@
 # adjust-cell-width = -2
 # adjust-cell-height = 6
 
-font-family = "Roboto Mono"
-font-style = "Regular"
-font-family-italic = "Victor Mono"
-# font-style-italic = "Extra Light 400 Regular"
-font-family-bold-italic = "Victor Mono"
-# font-style-bold-italic = "Extra Light 700 Regular"
-font-size = 15
-adjust-cell-height = 3
-adjust-cell-width = -3
-
-# Main
-# font-family = "Iosevka Sans Custom"
-# font-size = 17
+# Roboto
+# font-family = "Roboto Mono"
+# font-style = "Regular"
+# font-family-italic = "Victor Mono"
+# font-family-bold-italic = "Victor Mono"
+# font-size = 15
 # adjust-cell-height = 3
-# adjust-cell-width = -1
+# adjust-cell-width = -3
+
+# Iosevka Kinda Slab
+font-family = "Iosevka Not Slab"
+font-style = "Medium"
+font-feature = ss01, ss02, ss03, ss19
+font-family-italic = "Cascadia Code"
+font-style-italic = "SemiLight Italic"
+font-family-bold-italic = "Cascadia Code"
+font-style-bold-italic = "Italic"
+font-size = 17
+adjust-cell-height = 3
 
 # font-family = "Input Mono"
-# font-size = 16
+# font-size = 15
 # adjust-cell-height = 2
 # adjust-cell-width = -1
 
 # font-family = "CommitMonoV143"
-# font-size = 16
-# adjust-cell-height = 7
-# adjust-cell-width = -2
+# font-style = "400 Regular"
+# font-feature = ss01, ss02, ss03, ss04, ss05, cv01, cv02, cv08
+# font-size = 15
+# adjust-cell-height = 5
+# font-family-italic = "Roboto Mono"
+# font-family-bold-italic = "Roboto Mono"
+# font-style-italic = "Light"
+
+# font-family = "DM Mono Regular"
+# font-size = 15
+# adjust-cell-height = 3
 
 # font-family = "Victor Mono"
 # font-style = "Medium"
@@ -55,16 +67,15 @@ font-thicken-strength = 50
 # ------------------------------------
 cursor-style = "block"
 cursor-style-blink = false
+shell-integration = zsh
 shell-integration-features = no-cursor
 # ----------------
 
 # Theme setup
 # ------------------------------------
-# theme = dawnfox-custom
-# theme = catppuccin-mocha
-# theme = everforest-dark
-# theme = gruvbox-material
-theme = gruvbox-material-soft
+# theme = gruvbox-material-soft-light
+# theme = everforest-light-v2
+theme = Atom One Dark
 # ----------------
 
 # Window setup
@@ -73,6 +84,7 @@ macos-titlebar-style = hidden
 window-padding-x = 60
 window-padding-y = 5,5
 window-padding-balance = false
+window-save-state = always
 # ----------------
 
 # Keys setup
@@ -83,4 +95,3 @@ macos-option-as-alt = true
 
 # Keybindings setup
 # ------------------------------------
-keybind = shift+enter=text:\n
